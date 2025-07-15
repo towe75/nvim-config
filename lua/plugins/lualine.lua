@@ -4,6 +4,7 @@ return {
     dependencies = {
       "kyazdani42/nvim-web-devicons",
       "stevearc/aerial.nvim",
+      "folke/tokyonight.nvim",
     },
     opts = {
       options = {

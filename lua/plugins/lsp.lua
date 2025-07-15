@@ -2,6 +2,10 @@ return {
   {
     "hrsh7th/nvim-cmp",
     lazy = true,
+    dependencies = {
+      "williamboman/mason.nvim",
+      "zbirenbaum/copilot-cmp",
+    },
     opts = function(cmp, opts)
       local cmp = require('cmp')
       return {
@@ -22,8 +26,8 @@ return {
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
+          { name = "copilot",},
           { name = 'nvim_lsp' },
-        }, {
           { name = 'buffer' },
         })
       }
