@@ -23,13 +23,13 @@ return {
       },
       extensions = {
         file_browser = {
-          theme = "dropdown",
           hijack_netrw = true,
         },
       },
     },
     keys = {
       { "<C-P>", "<cmd>Telescope find_files<CR>" },
+      { "<leader>d", "<cmd>Telescope diagnostics<CR>" },
       {"<leader>p", function() require("telescope.builtin").find_files({ cwd = vim.fn.expand('%:p:h') }) end, desc = "Find Files (cwd: current file dir)"},
       {"<leader>o", function() require("telescope").extensions.file_browser.file_browser({ cwd = vim.fn.expand('%:p:h') }) end, desc = "File Browser (cwd: current file dir)"},
       {"<leader>g", function() require("telescope.builtin").git_files({ cwd = vim.fn.expand('%:p:h') }) end, desc = "Git Files (cwd: current file dir)"},
