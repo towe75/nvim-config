@@ -8,9 +8,6 @@ return {
       "nvim-lua/plenary.nvim",
       "kyazdani42/nvim-web-devicons",
     },
-    keys = { 
-        { "<C-P>", "<cmd>Telescope find_files<CR>" },
-    },
     opts = {
       defaults = {
         mappings = {
@@ -30,6 +27,18 @@ return {
           hijack_netrw = true,
         },
       },
+    },
+    keys = {
+      { "<C-P>", "<cmd>Telescope find_files<CR>" },
+      {"<leader>p", function() require("telescope.builtin").find_files({ cwd = vim.fn.expand('%:p:h') }) end, desc = "Find Files (cwd: current file dir)"},
+      {"<leader>o", function() require("telescope").extensions.file_browser.file_browser({ cwd = vim.fn.expand('%:p:h') }) end, desc = "File Browser (cwd: current file dir)"},
+      {"<leader>g", function() require("telescope.builtin").git_files({ cwd = vim.fn.expand('%:p:h') }) end, desc = "Git Files (cwd: current file dir)"},
+      {"<leader>f", "<cmd>Telescope live_grep<CR>", desc = "Live Grep"},
+      {"<leader><F6>", function() require("telescope.builtin").git_bcommits({ cwd = vim.fn.expand('%:p:h') }) end, desc = "Git Buffer Commits (cwd: current file dir)"},
+      {"<F7>", function() require("telescope.builtin").git_branches({ cwd = vim.fn.expand('%:p:h') }) end, desc = "Git Branches (cwd: current file dir)"},
+      {"<leader><F7>", function() require("telescope.builtin").git_bcommits() end, desc = "Git Buffer Commits (all)"},
+      {"<leader>s", function() require("telescope.builtin").lsp_document_symbols() end, desc = "LSP Document Symbols"},
+      {"<leader><Tab>", "<cmd>Telescope buffers<CR>", desc = "Buffers"},
     },
   },
   -- Telescope File Browser extension
