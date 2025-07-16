@@ -1,5 +1,8 @@
 -- Copilot.lua plugin setup for Neovim
--- See: https://github.com/zbirenbaum/copilot.lua
+--
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab AI CodeCompanion]])
+
 return {
     {
         "zbirenbaum/copilot.lua",
@@ -47,9 +50,40 @@ return {
                 server_opts_overrides = {}
             })
         end
-    }, 
-    {
+    }, {
         "zbirenbaum/copilot-cmp",
         config = function() require("copilot_cmp").setup() end
+    },
+    {
+        "olimorris/codecompanion.nvim",
+        opts = {
+            display = {
+                chat = {
+                    window = {
+                        position = "right",
+                    }
+                }
+            },
+            extensions = {
+              spinner = {},
+            },
+        },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "franco-ruggeri/codecompanion-spinner.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "ravitemer/mcphub.nvim",
+        },
+        keys = {
+          { "<leader>c", "<cmd>CodeCompanionChat toggle<CR>" },
+        },
+    },
+    {
+        "ravitemer/mcphub.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim"
+        },
+        --build = "npm install -g mcp-hub@latest", -- Installs `mcp-hub` node binary globally
+        config = function() require("mcphub").setup() end
     }
 }

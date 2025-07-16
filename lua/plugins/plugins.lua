@@ -51,5 +51,12 @@ return {
   { "martinda/Jenkinsfile-vim-syntax", ft = "Jenkinsfile" },
   { "udalov/kotlin-vim", ft = "kotlin" },
   { "Glench/Vim-Jinja2-Syntax", ft = "jinja" },
-  
+  -- Progress notification
+  {
+    "j-hui/fidget.nvim",
+    lazy = false,
+    opts = {
+      -- options
+    },
+  }
 }

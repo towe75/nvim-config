@@ -1,6 +1,6 @@
 return {
   -- Telescope for fuzzy finding
-  {"nvim-lua/plenary.nvim", lazy = true},
+  {"nvim-lua/plenary.nvim", lazy = false},
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.8",
