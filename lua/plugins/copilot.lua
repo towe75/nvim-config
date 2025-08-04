@@ -78,6 +78,9 @@ return {
           { "<leader>c", "<cmd>CodeCompanionChat toggle<CR>" },
         },
     },
+    {
+      'rcarriga/nvim-notify',
+    },
     -- {
     --     "ravitemer/mcphub.nvim",
     --     dependencies = {
