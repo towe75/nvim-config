@@ -8,7 +8,7 @@ return {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
         event = "InsertEnter",
-        config = function()
+        options = function()
             require("copilot").setup({
                 suggestion = {
                     enabled = false,
@@ -70,20 +70,20 @@ return {
         },
         dependencies = {
             "nvim-lua/plenary.nvim",
-            "franco-ruggeri/codecompanion-spinner.nvim",
             "nvim-treesitter/nvim-treesitter",
             "ravitemer/mcphub.nvim",
+            "franco-ruggeri/codecompanion-spinner.nvim",
         },
         keys = {
           { "<leader>c", "<cmd>CodeCompanionChat toggle<CR>" },
         },
     },
-    {
-        "ravitemer/mcphub.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim"
-        },
-        --build = "npm install -g mcp-hub@latest", -- Installs `mcp-hub` node binary globally
-        config = function() require("mcphub").setup() end
-    }
+    -- {
+    --     "ravitemer/mcphub.nvim",
+    --     dependencies = {
+    --         "nvim-lua/plenary.nvim"
+    --     },
+    --     --build = "npm install -g mcp-hub@latest", -- Installs `mcp-hub` node binary globally
+    --     config = function() require("mcphub").setup() end
+    -- }
 }

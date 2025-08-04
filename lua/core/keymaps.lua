@@ -18,6 +18,8 @@ vim.keymap.set("n", "<BS><BS>", ":bd<CR>", { silent = true })
 vim.keymap.set("n", "<leader><BS>", ":%bd|e#<CR>", { silent = true })
 vim.keymap.set("n", "<tab>", ":bn<CR>", { silent = true })
 vim.keymap.set("n", "<s-tab>", ":bp<CR>", { silent = true })
+vim.keymap.set("n", "<leader>q", ":quit<CR>", { silent = true })
+vim.keymap.set("n", "<leader>w", ":update<CR>", { silent = true })
 
 -- Git
 vim.keymap.set("n", "<leader>k", ":G<CR>", { silent = true })
