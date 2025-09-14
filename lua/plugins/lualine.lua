@@ -4,24 +4,24 @@ return {
     dependencies = {
       "kyazdani42/nvim-web-devicons",
       "stevearc/aerial.nvim",
-      "folke/tokyonight.nvim",
+--      "folke/tokyonight.nvim",
       "franco-ruggeri/codecompanion-lualine.nvim",
     },
     opts = {
       options = {
         icons_enabled = true,
         disabled_filetypes = { "dashboard", "NvimTree"},
-        theme = "tokyonight",
+        theme = "powerline",
         refresh = {
           statusline = 1000,
-          tabline = 1000,
+          --tabline = 1000,
           winbar = 1000,
         },
       },
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { "filename" },
+        lualine_c = { "lsp_status" },
         lualine_x = { "encoding", "codecompanion", "fileformat", "filetype" },
         lualine_y = { "progress" },
         lualine_z = { "location" },

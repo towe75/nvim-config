@@ -1,14 +1,13 @@
 return {
-  -- Gruvbox colorscheme
-  {
-    "morhetz/gruvbox",
-    priority = 1000,
-    config = function()
-      vim.cmd([[colorscheme gruvbox]])
-    end,
+  -- colorschemes
+  {"rebelot/kanagawa.nvim", },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000,
+  config = function()
+    vim.cmd([[colorscheme kanagawa]])
+  end,
   },
-  
-  -- Tokyo Night colorscheme
+  { "morhetz/gruvbox", },
+
   { "folke/tokyonight.nvim", },
   
   -- Treesitter for better syntax highlighting

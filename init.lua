@@ -25,7 +25,7 @@ require("core.keymaps")
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins", {
-  install = { colorscheme = { "gruvbox" } },
+  install = { colorscheme = { "catppuccin" } },
   checker = { enabled = false },
 })
 
