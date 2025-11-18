@@ -75,6 +75,13 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   end
 })
 
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.build_defs",},
+  callback = function()
+    vim.bo.filetype = "python"
+  end
+})
+
 -- Toggle line highlight when enter/leave insert mode
 vim.api.nvim_create_autocmd({"InsertEnter", "InsertLeave"}, {
   callback = function()
