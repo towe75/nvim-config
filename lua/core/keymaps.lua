@@ -15,6 +15,7 @@ vim.keymap.set("n", "<F6>", ":G<CR>")
 -- Buffer navigation
 vim.keymap.set("n", "<leader><Space>", ":b#<CR>", { silent = true })
 vim.keymap.set("n", "<BS><BS>", ":bd<CR>", { silent = true })
+vim.keymap.set("n", "<s-BS><s-BS>", ":bd!<CR>", { silent = true })
 vim.keymap.set("n", "<leader><BS>", ":%bd|e#<CR>", { silent = true })
 vim.keymap.set("n", "<tab>", ":bn<CR>", { silent = true })
 vim.keymap.set("n", "<s-tab>", ":bp<CR>", { silent = true })
