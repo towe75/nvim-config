@@ -9,22 +9,7 @@ return {
   { "morhetz/gruvbox", },
 
   { "folke/tokyonight.nvim", },
-  
-  -- Treesitter for better syntax highlighting
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    opts = {
-      ensure_installed = { "go", "lua", "php", "python", "vim", "vimdoc", "javascript", "typescript" },
-      sync_install = false,
-      auto_install = true,
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-      },
-    },
-  },
-  
+    
   -- Aerial for code outline
   {
     "stevearc/aerial.nvim",
